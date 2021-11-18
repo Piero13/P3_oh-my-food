@@ -1,0 +1,33 @@
+/*main properties*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    max-width: 767px;
+}
+
+
+/*index*/
+
+/*header*/
+.header{
+    &_title{
+        font-size: 2rem;
+        text-align: center;
+        font-family: "shrikhand", cursive, sans-serif;
+        font-weight: lighter;
+    }
+}
+
+/*search & explore*/
+
+/*restaurants*/
+.card_img{
+    width: 100%;
+}
+
+/*footer*/
