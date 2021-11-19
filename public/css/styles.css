@@ -8,6 +8,7 @@
 
 body {
   max-width: 767px;
+  margin: auto;
 }
 
 h1 {
@@ -31,6 +32,7 @@ p, h2, h3, input {
 #explore {
   background-color: #f2f2f2;
   height: 350px;
+  margin-bottom: 50px;
 }
 
 .location {
@@ -55,12 +57,12 @@ p, h2, h3, input {
   flex-direction: column;
   justify-content: space-between;
   height: 295px;
-  padding: 40px 0 60px 0;
+  padding: 40px 0 55px 0;
   text-align: center;
 }
 .explore__title {
   padding: 0 50px;
-  font-weight: 900;
+  font-weight: bolder;
 }
 .explore__txt {
   padding-bottom: 15px;
@@ -69,7 +71,7 @@ p, h2, h3, input {
 }
 .explore__btn {
   height: 50px;
-  padding: 16px 16px 15px 16px;
+  padding: 16px 20px 15px 20px;
   border: none;
   border-radius: 25px;
   background-color: #ff79da;
@@ -77,8 +79,55 @@ p, h2, h3, input {
   font-weight: 500;
 }
 
+/*fonctionnement*/
+#operation {
+  height: 350px;
+  margin-bottom: 50px;
+}
+
+.operation__title {
+  height: 60px;
+  margin-left: 20px;
+}
+.operation__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 290px;
+}
+.operation__item {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  margin: 0 25px;
+  border-radius: 30px;
+  background-color: #f2f2f2;
+}
+.operation__num {
+  position: relative;
+  left: -0.7em;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  background-color: #9356dc;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  color: #fff;
+  text-align: center;
+}
+.operation__item i {
+  width: 25px;
+  height: 25px;
+  margin: 0 15px 0 15px;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+.operation__txt {
+  font-weight: bold;
+}
+
 /*restaurants*/
-.card_img {
+.card__img {
   width: 100%;
 }
 
