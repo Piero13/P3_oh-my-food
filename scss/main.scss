@@ -1,3 +1,8 @@
+/*variables*/
+$color-primary:#9356dc;
+$color-secondary:#ff79da;
+$color-tertiary:#99e2d0;
+
 /*main properties*/
 
 *{
@@ -10,20 +15,75 @@ body{
     max-width: 767px;
 }
 
+h1{
+    font-family: "shrikhand", cursive, sans-serif;
+}
+
+p, h2, h3, input{
+    font-family: "roboto", sans-serif;
+}
 
 /*index*/
 
 /*header*/
 .header{
-    &_title{
+    &__title{
         font-size: 2rem;
         text-align: center;
-        font-family: "shrikhand", cursive, sans-serif;
         font-weight: lighter;
+        margin: 10px 0;
     }
 }
 
 /*search & explore*/
+#explore{
+    background-color: #f2f2f2;
+    height: 350px;
+}
+
+.location{
+    display: flex;
+    justify-content: center;
+    height: 55px;
+    padding: 17px;
+    background-color: darken($color: #f2f2f2, $amount: 5%);
+    & i{
+        position: relative;
+        left: -15px;
+    }
+    &__txt{
+        width: fit-content;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+}
+
+.explore{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 295px;
+    padding: 40px 0 60px 0;
+    text-align: center;
+    &__title{
+        padding: 0 50px;
+        font-weight: 900;
+    }
+    &__txt{
+        padding-bottom: 15px;
+        font-size: 1.1rem;
+        color: lighten($color: #000, $amount: 50%);
+    }
+    &__btn{
+        height: 50px;
+        padding: 16px 16px 15px 16px;
+        border: none;
+        border-radius: 25px;
+        background-color: $color-secondary;
+        color: #fff;
+        font-weight: 500;
+    }
+}
 
 /*restaurants*/
 .card_img{

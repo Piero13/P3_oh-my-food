@@ -16,24 +16,26 @@
 <body>
 <!--header-->
 	<header>
-		<h1 class="header_title">ohmyfood</h1>
+		<h1 class="header__title">ohmyfood</h1>
 	</header>
 
 <!--main part-->
 	<main>
 
 	<!--bloc search & explore-->
-		<section>
-			<div>
-				<p>
-					<i></i>
+		<section id="explore">
+			<div class="location">
+				<p class="location__txt">
+					<i class="fas fa-map-marker-alt"></i>
 					Paris, Belleville
 				</p>
 			</div>
-			<div>
-				<h2>Réservez le menu qui vous convient</h2>
-				<p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-				<form action="#"></form>
+			<div class="explore">
+				<h2 class="explore__title">Réservez le menu qui vous convient</h2>
+				<p class="explore__txt">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+				<form method="post" action="#" class="explore__form">
+					<input type="button" value="Explorer nos restaurants" class="explore__btn">
+				</form>
 			</div>
 		</section>
 
