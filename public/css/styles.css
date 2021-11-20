@@ -15,17 +15,17 @@ h1 {
   font-family: "shrikhand", cursive, sans-serif;
 }
 
-p, h2, h3, input {
+p, h2, h3, input, li {
   font-family: "roboto", sans-serif;
 }
 
 /*index*/
 /*header*/
 .header__title {
-  font-size: 2rem;
-  text-align: center;
-  font-weight: lighter;
   margin: 10px 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: lighter;
 }
 
 /*search & explore*/
@@ -48,7 +48,6 @@ p, h2, h3, input {
 }
 .location__txt {
   width: fit-content;
-  font-size: 1.1rem;
   font-weight: bold;
 }
 
@@ -66,7 +65,7 @@ p, h2, h3, input {
 }
 .explore__txt {
   padding-bottom: 15px;
-  font-size: 1.1rem;
+  font-size: 18px;
   color: gray;
 }
 .explore__btn {
@@ -111,16 +110,18 @@ p, h2, h3, input {
   line-height: 25px;
   background-color: #9356dc;
   border-radius: 50%;
-  font-size: 0.9rem;
+  font-size: 14px;
   color: #fff;
   text-align: center;
 }
 .operation__item i {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 25px;
   width: 25px;
   height: 25px;
   margin: 0 15px 0 15px;
-  font-size: 1.2rem;
-  vertical-align: middle;
+  font-size: 20px;
 }
 .operation__txt {
   font-weight: bold;
@@ -132,5 +133,29 @@ p, h2, h3, input {
 }
 
 /*footer*/
+#footer {
+  background-color: #333333;
+  color: #fff;
+  padding: 25px;
+}
+
+.footer__title {
+  font-family: "shrikhand", cursive, sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+.footer__list {
+  list-style: none;
+}
+.footer__item i {
+  width: 25px;
+  font-size: 14px;
+}
+.footer__item {
+  margin: 10px 0;
+  font-size: 15px;
+  font-weight: 500;
+}
 
 /*# sourceMappingURL=styles.css.map */
