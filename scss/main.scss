@@ -15,6 +15,7 @@ $font-fam-txt: "roboto", sans-serif;
 
 body{
     max-width: 767px;
+    min-width: 320px;
     margin: auto;
 }
 
@@ -22,8 +23,15 @@ h1{
     font-family: $font-fam-title
 }
 
+h2{
+    font-size: 22px;
+}
 p, h2, h3, input, li{
     font-family: $font-fam-txt
+}
+
+a{
+    text-decoration: none;
 }
 
 /*index*/
@@ -73,7 +81,7 @@ p, h2, h3, input, li{
         font-weight: bolder;
     }
     &__txt{
-        padding-bottom: 15px;
+        padding: 0 20px 15px 20px;
         font-size: 18px;
         color: lighten($color: #000, $amount: 50%);
     }
@@ -85,13 +93,14 @@ p, h2, h3, input, li{
         background-color: $color-secondary;
         color: #fff;
         font-weight: 500;
+        cursor: pointer;
     }
 }
 
 /*fonctionnement*/
 #operation{
     height: 350px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 .operation{
@@ -124,7 +133,6 @@ p, h2, h3, input, li{
         font-size: 14px;
         color: #fff;
         text-align: center;
-        
     }
     &__item i{
         display: inline-block;
@@ -141,8 +149,52 @@ p, h2, h3, input, li{
 }
 
 /*restaurants*/
-.card__img{
-    width: 100%;
+#restaurants{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 25px;
+    background-color: #f2f2f2;
+}
+.restaurants{
+    &__title{
+        margin-bottom: 25px;
+    }
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    &__image{
+        height: 160px;
+        position: relative;
+        overflow: hidden;
+        &__img{
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    &__info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 10px;
+        background-color: #fff;
+        color: #000;
+        &__title{
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        &__text{
+            font-size: 16px;
+        }
+        &__icon{
+            margin-right: 10px;
+            font-size: 22px;
+        }
+    }
 }
 
 /*footer*/
@@ -165,6 +217,10 @@ p, h2, h3, input, li{
     &__item i{
         width: 25px;
         font-size: 14px;
+    }
+    &__item a{
+        color: #fff;
+        text-decoration: none;
     }
     &__item{
         margin: 10px 0;
