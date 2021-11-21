@@ -32,6 +32,7 @@ p, h2, h3, input, li{
 
 a{
     text-decoration: none;
+    color: #000;
 }
 
 /*index*/
@@ -117,7 +118,7 @@ a{
     &__item{
         display: flex;
         align-items: center;
-        height: 80px;
+        height: 75px;
         margin: 0 25px;
         border-radius: 30px;
         background-color: #f2f2f2;
@@ -144,6 +145,7 @@ a{
         font-size: 20px;
     }
     &__txt{
+        font-size: 15px;
         font-weight: bold;
     }
 }
@@ -163,17 +165,36 @@ a{
 .card{
     display: flex;
     flex-direction: column;
+    min-width: 325px;
+    max-width: 400px;
     border-radius: 15px;
     overflow: hidden;
-    margin-bottom: 15px;
+    margin: 0 auto 15px auto;
     &__image{
-        height: 160px;
+        height: 170px;
         position: relative;
         overflow: hidden;
         &__img{
             width: 100%;
             position: absolute;
             bottom: 0;
+        }
+        // &__img2{
+        //     width: 100%;
+        //     position: absolute;
+        //     top: 50%;
+        //     left: 50%;
+        //     transform: translate(-50%, -56%);
+        // }
+        &__overtext{
+            position: absolute;
+            top: 8%;
+            right: 5%;
+            padding: 6px 12px;
+            background-color: $color-tertiary;
+            font-size: 14px;
+            font-weight: bold;
+            color: darken($color: $color-tertiary, $amount: 40%);
         }
     }
     &__info{
@@ -193,6 +214,9 @@ a{
         &__icon{
             margin-right: 10px;
             font-size: 22px;
+            & i:nth-child(2){
+                display: none;
+            }
         }
     }
 }
