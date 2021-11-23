@@ -1,9 +1,44 @@
 /*variables*/
+
 $color-primary:#9356dc;
 $color-secondary:#ff79da;
 $color-tertiary:#99e2d0;
 $font-fam-title: "shrikhand", cursive, sans-serif;
 $font-fam-txt: "roboto", sans-serif;
+
+/*mixins*/
+@mixin box-shadow {
+    box-shadow: 3px 3px 15px rgba(0,0,0,.2);
+}
+
+@mixin box-shadow-hover {
+    box-shadow: 5px 5px 15px rgba(0,0,0,.35) ;
+    transition-duration: 400ms;
+}
+
+@mixin btn-gradient {
+    background: linear-gradient(to top left, $color-primary, $color-secondary);
+}
+
+@mixin btn-gradient-hover {
+    $colour1: lighten($color-primary,3%);
+    $colour2: lighten($color-secondary,3%);
+    background: linear-gradient(to top left, $colour1, $colour2);
+}
+
+@mixin heart-gradient {
+    background:-moz-linear-gradient(to bottom, $color-primary, $color-secondary); 
+    background: -webkit-linear-gradient(to bottom, $color-primary, $color-secondary); 
+    background: linear-gradient(to bottom, $color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+}
+
+@mixin heart-gradient-hover {
+    font-size: 22px;
+    transition-duration: 800ms;
+}
 
 /*main properties*/
 
@@ -91,14 +126,19 @@ a{
         padding: 16px 20px 15px 20px;
         border: none;
         border-radius: 25px;
-        background-color: $color-secondary;
+        @include box-shadow;
+        @include btn-gradient;
         color: #fff;
         font-weight: 500;
         cursor: pointer;
+        &:hover{
+            @include btn-gradient-hover;
+            @include box-shadow-hover;
+        }
     }
 }
 
-/*fonctionnement*/
+/*"fonctionnement"*/
 #operation{
     height: 350px;
     margin-bottom: 60px;
@@ -122,6 +162,15 @@ a{
         margin: 0 25px;
         border-radius: 30px;
         background-color: #f2f2f2;
+        @include box-shadow;
+        &:hover{
+            background-color: lighten($color-primary, 35%);
+            @include box-shadow-hover;
+            & .operation__icon {
+                color: $color-primary;
+                transition: 400ms;
+            }
+        }
     }
     &__num{
         position: relative;
@@ -135,7 +184,7 @@ a{
         color: #fff;
         text-align: center;
     }
-    &__item i{
+    &__icon{
         display: inline-block;
         vertical-align: middle;
         line-height: 25px;
@@ -157,19 +206,25 @@ a{
     padding: 50px 25px;
     background-color: #f2f2f2;
 }
-.restaurants{
+
+.restaurants {
     &__title{
         margin-bottom: 25px;
     }
 }
+
 .card{
     display: flex;
     flex-direction: column;
     min-width: 325px;
     max-width: 400px;
     border-radius: 15px;
+    @include box-shadow;
     overflow: hidden;
-    margin: 0 auto 15px auto;
+    margin: 0 auto 18px auto;
+    &:hover {
+        @include box-shadow-hover;
+    }
     &__image{
         height: 170px;
         position: relative;
@@ -179,19 +234,13 @@ a{
             position: absolute;
             bottom: 0;
         }
-        // &__img2{
-        //     width: 100%;
-        //     position: absolute;
-        //     top: 50%;
-        //     left: 50%;
-        //     transform: translate(-50%, -56%);
-        // }
         &__overtext{
             position: absolute;
             top: 8%;
             right: 5%;
             padding: 6px 12px;
             background-color: $color-tertiary;
+            border-radius: 3px;
             font-size: 14px;
             font-weight: bold;
             color: darken($color: $color-tertiary, $amount: 40%);
@@ -204,18 +253,44 @@ a{
         padding: 15px 10px;
         background-color: #fff;
         color: #000;
-        &__title{
+        &__title {
             font-size: 16px;
             margin-bottom: 5px;
         }
-        &__text{
+        &__text {
             font-size: 16px;
         }
-        &__icon{
+        &__icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin-right: 10px;
+            width: 28px;
+            height: 28px;
             font-size: 22px;
-            & i:nth-child(2){
-                display: none;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            & .empty-heart {
+                position: absolute;
+                z-index: 2;
+                transform: scale(1.1);
+                transition-property: transform;
+            }
+            & .filled-heart {
+                position: absolute;
+                z-index: 3;
+                font-size: 0;
+            }
+            &:hover {
+                & .empty-heart {
+                    color: transparent;
+                    transition: all 1.6s;
+                }
+                & .filled-heart {
+                    @include heart-gradient;
+                    @include heart-gradient-hover()
+                }
             }
         }
     }
@@ -237,18 +312,21 @@ a{
     }
     &__list{
         list-style: none;
-    }
-    &__item i{
-        width: 25px;
-        font-size: 14px;
-    }
-    &__item a{
-        color: #fff;
-        text-decoration: none;
-    }
-    &__item{
-        margin: 10px 0;
-        font-size: 15px;
-        font-weight: 500;
+        &__item{
+            margin: 10px 0;
+            font-size: 15px;
+            font-weight: 500;
+            &:hover{
+                text-shadow: 2px 2px 5px rgba(#fff,0.4);
+            }
+            & i{
+                width: 25px;
+                font-size: 14px;
+            }
+            & a{
+            color: #fff;
+            text-decoration: none;
+            }
+        }
     }
 }
