@@ -26,6 +26,32 @@ $font-fam-txt: "roboto", sans-serif;
     background: linear-gradient(to top left, $colour1, $colour2);
 }
 
+@mixin heart-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    width: 28px;
+    height: 28px;
+    font-size: 22px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;    
+}
+
+@mixin empty-heart {
+    position: absolute;
+    z-index: 2;
+    transform: scale(1.1);
+    transition-property: transform;
+}
+
+@mixin filled-heart {
+    position: absolute;
+    z-index: 3;
+    font-size: 0;
+}
+
 @mixin heart-gradient {
     background:-moz-linear-gradient(to bottom, $color-primary, $color-secondary); 
     background: -webkit-linear-gradient(to bottom, $color-primary, $color-secondary); 
@@ -42,30 +68,31 @@ $font-fam-txt: "roboto", sans-serif;
 
 /*main properties*/
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     max-width: 767px;
     min-width: 320px;
     margin: auto;
 }
 
-h1{
+h1 {
     font-family: $font-fam-title
 }
 
-h2{
+h2 {
     font-size: 22px;
 }
-p, h2, h3, input, li{
+
+p, h2, h3, input, li {
     font-family: $font-fam-txt
 }
 
-a{
+a {
     text-decoration: none;
     color: #000;
 }
@@ -73,55 +100,62 @@ a{
 /*index*/
 
 /*header*/
-.header{
-    &__title{
-        margin: 10px 0;
+
+.header {
+    &__title {
+        width: 100%;
+        margin: 15px 0;
         text-align: center;
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: lighter;
     }
 }
 
 /*search & explore*/
-#explore{
+#explore {
     background-color: #f2f2f2;
     height: 350px;
     margin-bottom: 50px;
 }
 
-.location{
+.location {
     display: flex;
     justify-content: center;
     height: 55px;
     padding: 17px;
     background-color: darken($color: #f2f2f2, $amount: 5%);
-    & i{
+
+    & i {
         position: relative;
         left: -15px;
     }
-    &__txt{
+
+    &__txt {
         width: fit-content;
         font-weight: bold;
     }
 }
 
-.explore{
+.explore {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 295px;
     padding: 40px 0 55px 0;
     text-align: center;
-    &__title{
+
+    &__title {
         padding: 0 50px;
         font-weight: bolder;
     }
-    &__txt{
+
+    &__txt {
         padding: 0 20px 15px 20px;
         font-size: 18px;
         color: lighten($color: #000, $amount: 50%);
     }
-    &__btn{
+
+    &__btn {
         height: 50px;
         padding: 16px 20px 15px 20px;
         border: none;
@@ -131,7 +165,8 @@ a{
         color: #fff;
         font-weight: 500;
         cursor: pointer;
-        &:hover{
+
+        &:hover {
             @include btn-gradient-hover;
             @include box-shadow-hover;
         }
@@ -139,23 +174,25 @@ a{
 }
 
 /*"fonctionnement"*/
-#operation{
+#operation {
     height: 350px;
     margin-bottom: 60px;
 }
 
-.operation{
-    &__title{
+.operation {
+    &__title {
         height: 60px;
         margin-left: 20px;
     }
-    &__list{
+
+    &__list {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 290px;
     }
-    &__item{
+
+    &__item {
         display: flex;
         align-items: center;
         height: 75px;
@@ -163,16 +200,19 @@ a{
         border-radius: 30px;
         background-color: #f2f2f2;
         @include box-shadow;
-        &:hover{
+
+        &:hover {
             background-color: lighten($color-primary, 35%);
             @include box-shadow-hover;
+
             & .operation__icon {
                 color: $color-primary;
                 transition: 400ms;
             }
         }
     }
-    &__num{
+
+    &__num {
         position: relative;
         left: -0.70em;
         width: 25px;
@@ -184,7 +224,8 @@ a{
         color: #fff;
         text-align: center;
     }
-    &__icon{
+
+    &__icon {
         display: inline-block;
         vertical-align: middle;
         line-height: 25px;
@@ -193,14 +234,15 @@ a{
         margin: 0 15px 0 15px;
         font-size: 20px;
     }
-    &__txt{
+
+    &__txt {
         font-size: 15px;
         font-weight: bold;
     }
 }
 
 /*restaurants*/
-#restaurants{
+#restaurants {
     display: flex;
     flex-direction: column;
     padding: 50px 25px;
@@ -208,12 +250,12 @@ a{
 }
 
 .restaurants {
-    &__title{
+    &__title {
         margin-bottom: 25px;
     }
 }
 
-.card{
+.card {
     display: flex;
     flex-direction: column;
     min-width: 270px;
@@ -222,19 +264,23 @@ a{
     @include box-shadow;
     overflow: hidden;
     margin: 0 auto 18px auto;
+
     &:hover {
         @include box-shadow-hover;
     }
-    &__image{
+
+    &__image {
         height: 170px;
         position: relative;
         overflow: hidden;
-        &__img{
+
+        &__img {
             width: 100%;
             position: absolute;
             bottom: 0;
         }
-        &__overtext{
+
+        &__overtext {
             position: absolute;
             top: 8%;
             right: 5%;
@@ -246,50 +292,44 @@ a{
             color: darken($color: $color-tertiary, $amount: 40%);
         }
     }
-    &__info{
+
+    &__info {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 15px 10px;
         background-color: #fff;
         color: #000;
+
         &__title {
             font-size: 16px;
             margin-bottom: 5px;
         }
+
         &__text {
             font-size: 16px;
         }
+
         &__icon {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 10px;
-            width: 28px;
-            height: 28px;
-            font-size: 22px;
-            position: relative;
-            z-index: 1;
-            overflow: hidden;
+            @include heart-icon;
+
             & .empty-heart {
-                position: absolute;
-                z-index: 2;
-                transform: scale(1.1);
-                transition-property: transform;
+                @include empty-heart;
             }
+
             & .filled-heart {
-                position: absolute;
-                z-index: 3;
-                font-size: 0;
+                @include filled-heart;
             }
-            &:hover {
+
+            &:hover {               
                 & .empty-heart {
                     color: transparent;
                     transition: all 1.6s;
                 }
+
                 & .filled-heart {
                     @include heart-gradient;
-                    @include heart-gradient-hover()
+                    @include heart-gradient-hover;
                 }
             }
         }
@@ -297,35 +337,105 @@ a{
 }
 
 /*footer*/
-#footer{
+#footer {
     background-color: lighten($color: #000, $amount: 20%);
     color: #fff;
     padding: 25px;
 }
 
 .footer{
-    &__title{
+    &__title {
         font-family: $font-fam-title;
         font-size: 17px;
         font-weight: 500;
         margin-bottom: 25px;
     }
-    &__list{
+    &__list {
         list-style: none;
-        &__item{
+
+        &__item {
             margin: 10px 0;
             font-size: 15px;
             font-weight: 500;
-            &:hover{
+
+            &:hover {
                 text-shadow: 2px 2px 5px rgba(#fff,0.4);
             }
-            & i{
+
+            & i {
                 width: 25px;
                 font-size: 14px;
             }
-            & a{
+
+            & a {
             color: #fff;
             text-decoration: none;
+            }
+        }
+    }
+}
+
+/*Menus*/
+
+/*header*/
+
+#header {
+    position: relative;
+}
+
+.back {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    &__icon {
+        margin-left: 25px;
+        font-size: 20px;
+    }
+}
+
+.banner {
+    &__img {
+        width: 100%;
+        max-height: 400px;
+    }
+}
+
+.menu {
+    padding: 0 25px 0 25px;
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 35px;
+
+        & h2 {
+        font-family: $font-fam-title;
+        font-weight: lighter;
+        font-size: 1.8rem
+        }
+
+        &__icon {
+            @include heart-icon;
+
+            & .empty-heart {
+                @include empty-heart;
+            }
+
+            & .filled-heart {
+                @include filled-heart;
+            }
+
+            &:hover {
+                & .empty-heart {
+                    color: transparent;
+                    transition: all 1.6s;
+                }
+
+                & .filled-heart {
+                    @include heart-gradient;
+                    @include heart-gradient-hover;
+                }
             }
         }
     }

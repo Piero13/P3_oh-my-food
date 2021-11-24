@@ -33,9 +33,10 @@ a {
 /*index*/
 /*header*/
 .header__title {
-  margin: 10px 0;
+  width: 100%;
+  margin: 15px 0;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: lighter;
 }
 
@@ -287,6 +288,79 @@ a {
 .footer__list__item a {
   color: #fff;
   text-decoration: none;
+}
+
+/*Menus*/
+/*header*/
+#header {
+  position: relative;
+}
+
+.back {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.back__icon {
+  margin-left: 25px;
+  font-size: 20px;
+}
+
+.banner__img {
+  width: 100%;
+  max-height: 400px;
+}
+
+.menu {
+  padding: 0 25px 0 25px;
+}
+.menu__title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+.menu__title h2 {
+  font-family: "shrikhand", cursive, sans-serif;
+  font-weight: lighter;
+  font-size: 1.8rem;
+}
+.menu__title__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  width: 28px;
+  height: 28px;
+  font-size: 22px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.menu__title__icon .empty-heart {
+  position: absolute;
+  z-index: 2;
+  transform: scale(1.1);
+  transition-property: transform;
+}
+.menu__title__icon .filled-heart {
+  position: absolute;
+  z-index: 3;
+  font-size: 0;
+}
+.menu__title__icon:hover .empty-heart {
+  color: transparent;
+  transition: all 1.6s;
+}
+.menu__title__icon:hover .filled-heart {
+  background: -moz-linear-gradient(to bottom, #9356dc, #ff79da);
+  background: -webkit-linear-gradient(to bottom, #9356dc, #ff79da);
+  background: linear-gradient(to bottom, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 22px;
+  transition-duration: 800ms;
 }
 
 /*# sourceMappingURL=styles.css.map */
