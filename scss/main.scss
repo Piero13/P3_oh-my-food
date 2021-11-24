@@ -216,7 +216,7 @@ a{
 .card{
     display: flex;
     flex-direction: column;
-    min-width: 325px;
+    min-width: 270px;
     max-width: 400px;
     border-radius: 15px;
     @include box-shadow;
