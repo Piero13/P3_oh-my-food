@@ -82,14 +82,15 @@ a {
 }
 .explore__btn {
   height: 50px;
+  width: 215px;
   padding: 16px 20px 15px 20px;
   border: none;
   border-radius: 25px;
-  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(to top left, #9356dc, #ff79da);
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.25);
   color: #fff;
   font-weight: 500;
   cursor: pointer;
+  background: linear-gradient(to top left, #9356dc, #ff79da);
 }
 .explore__btn:hover {
   background: linear-gradient(to top left, #9b63df, #ff88de);
@@ -313,17 +314,23 @@ a {
 }
 
 .menu {
-  padding: 0 25px 0 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 15px 60px 15px;
+  background-color: #f2f2f2;
 }
 .menu__title {
   display: flex;
   justify-content: space-between;
-  margin-top: 35px;
+  width: 100%;
+  margin-bottom: 35px;
+  padding-left: 10px;
 }
 .menu__title h2 {
   font-family: "shrikhand", cursive, sans-serif;
   font-weight: lighter;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
 .menu__title__icon {
   display: flex;
@@ -361,6 +368,72 @@ a {
   -webkit-text-fill-color: transparent;
   font-size: 22px;
   transition-duration: 800ms;
+}
+.menu__dishes {
+  font-family: "roboto", sans-serif;
+  margin-bottom: 35px;
+}
+.menu__dishes__title {
+  width: 40px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  padding-bottom: 5px;
+  border-bottom: 3px #99e2d0 solid;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: lighter;
+}
+.menu__btn {
+  height: 50px;
+  width: 215px;
+  padding: 16px 20px 15px 20px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(to top left, #9356dc, #ff79da);
+}
+.menu__btn:hover {
+  background: linear-gradient(to top left, #9b63df, #ff88de);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.35);
+  transition-duration: 400ms;
+}
+
+.dish {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  margin: 15px 5px;
+  padding: 10px 0 10px 12px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+}
+.dish:hover {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.35);
+  transition-duration: 400ms;
+}
+.dish__info__title {
+  font-size: 1.1rem;
+  padding-bottom: 4px;
+}
+.dish__info__txt {
+  font-size: 0.9rem;
+  padding-top: 3px;
+}
+.dish__price {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  padding: 0 20px 3px 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.dish__check {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
