@@ -6,14 +6,16 @@ $color-tertiary:#99e2d0;
 $font-fam-title: "shrikhand", cursive, sans-serif;
 $font-fam-txt: "roboto", sans-serif;
 
+
 /*mixins*/
+
 @mixin box-shadow {
     box-shadow: 3px 3px 15px rgba(0,0,0,.2);
+    transition-duration: 600ms;
 }
 
 @mixin box-shadow-hover {
     box-shadow: 5px 5px 15px rgba(0,0,0,.35) ;
-    transition-duration: 400ms;
 }
 
 @mixin btn {
@@ -30,6 +32,7 @@ $font-fam-txt: "roboto", sans-serif;
 
 @mixin btn-gradient {
     background: linear-gradient(to top left, $color-primary, $color-secondary);
+    transition-duration: 600ms;
 }
 
 @mixin btn-gradient-hover {
@@ -56,6 +59,7 @@ $font-fam-txt: "roboto", sans-serif;
     z-index: 2;
     transform: scale(1.1);
     transition-property: transform;
+    transition-duration: 800ms;
 }
 
 @mixin filled-heart {
@@ -71,12 +75,13 @@ $font-fam-txt: "roboto", sans-serif;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color:transparent;
+    transition-duration: 800ms;
 }
 
 @mixin heart-gradient-hover {
     font-size: 22px;
-    transition-duration: 800ms;
 }
+
 
 /*main properties*/
 
@@ -109,6 +114,7 @@ a {
     color: #000;
 }
 
+
 /*index*/
 
 /*header*/
@@ -124,6 +130,7 @@ a {
 }
 
 /*search & explore*/
+
 #explore {
     background-color: #f2f2f2;
     height: 350px;
@@ -164,12 +171,13 @@ a {
     &__txt {
         padding: 0 20px 15px 20px;
         font-size: 18px;
-        color: lighten($color: #000, $amount: 50%);
+        color: lighten(#000000, 50%);
     }
 
     &__btn {
         @include btn;
         @include btn-gradient;
+        @include box-shadow;
 
         &:hover {
             @include btn-gradient-hover;
@@ -179,6 +187,7 @@ a {
 }
 
 /*"fonctionnement"*/
+
 #operation {
     height: 350px;
     margin-bottom: 60px;
@@ -200,8 +209,10 @@ a {
     &__item {
         display: flex;
         align-items: center;
+        position: relative;
         height: 75px;
         margin: 0 25px;
+        padding: 0 25px;
         border-radius: 30px;
         background-color: #f2f2f2;
         @include box-shadow;
@@ -218,8 +229,8 @@ a {
     }
 
     &__num {
-        position: relative;
-        left: -0.70em;
+        position: absolute;
+        left: -12.5px;
         width: 25px;
         height: 25px;
         line-height: 25px;
@@ -247,6 +258,7 @@ a {
 }
 
 /*restaurants*/
+
 #restaurants {
     display: flex;
     flex-direction: column;
@@ -268,7 +280,7 @@ a {
     border-radius: 15px;
     @include box-shadow;
     overflow: hidden;
-    margin: 0 auto 18px auto;
+    margin: 0 auto 20px auto;
 
     &:hover {
         @include box-shadow-hover;
@@ -342,8 +354,9 @@ a {
 }
 
 /*footer*/
+
 #footer {
-    background-color: lighten($color: #000, $amount: 20%);
+    background-color: lighten(#000000, 20%);
     color: #fff;
     padding: 25px;
 }
@@ -355,6 +368,7 @@ a {
         font-weight: 500;
         margin-bottom: 25px;
     }
+
     &__list {
         list-style: none;
 
@@ -406,6 +420,7 @@ a {
     align-items: flex-end;
     height: 245px;
     overflow: hidden;
+
     &__img {
         width: 100%;
     }
@@ -415,10 +430,13 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     width: 100%;
+    margin-top: -40px;
     padding: 35px 15px 60px 15px;
     border-radius: 40px 40px 0 0;
     background-color: #f2f2f2;
+
     &__title {
         display: flex;
         justify-content: space-between;
@@ -456,6 +474,7 @@ a {
             }
         }
     }
+
     &__dishes {
         font-family: $font-fam-txt;
         width: 100%;
@@ -463,8 +482,7 @@ a {
     
         &__title {
             width: 40px;
-            margin-bottom: 15px;
-            margin-left: 10px;
+            margin: 0 0 15px 10px;
             padding-bottom: 5px;
             border-bottom: 3px $color-tertiary solid;
             text-transform: uppercase;
@@ -472,9 +490,11 @@ a {
             font-weight: lighter;
         }
     }
+
     &__btn {
         @include btn;
         @include btn-gradient;
+        @include box-shadow;
 
         &:hover {
             @include btn-gradient-hover;
@@ -482,8 +502,6 @@ a {
         }
     }
 }
-
-
 
 .dish {
     display: flex;
@@ -524,4 +542,132 @@ a {
     &__check {
         display: none;
     }
+}
+
+
+/*tablet design*/
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    
+/*index*/
+
+    body {
+        min-width: none;
+        max-width: none;
+        width: 100%;
+    }
+
+    #operation {
+        height: auto;
+    }
+
+    .operation {
+        &__list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: auto;
+        }
+
+        &__item {
+            width: 200px;
+        }
+    }
+
+    .restaurants {
+        &__cards{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+
+    .card {
+        min-width: initial;
+        max-width: initial;
+        width: 40%;
+        margin: 0 0 30px 0;
+    }
+
+    /*menus*/
+
+}
+
+
+/*desktop design*/
+
+@media screen and (min-width:992px) {
+        
+/*index*/
+
+    body {
+        min-width: none;
+        max-width: none;
+        width: 100%;
+    }
+
+    #header {
+        background-color: #f2f2f2;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .header {
+        &__title {
+            margin: 0;
+        }
+    }
+
+    main {
+        display: flex;
+        width: 100%;
+    }
+
+    #explore-operation {
+        width: 30%;
+        margin-left: 15px;
+    }
+
+    .operation {
+        &__item {
+            height: 60px;
+        }
+        &__title {
+            margin-left: 15px;
+        }
+    }
+
+    #restaurants {
+        width: 70%;
+        margin: 0 auto;
+        padding-top: 15px;
+        background-color: initial;
+    }
+
+    .restaurants {
+        &__cards{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__title {
+            margin-left: 40px;
+        }
+    }
+
+    .card {
+        min-width: none;
+        max-width: none;
+        width: 40%;
+        margin-bottom: 40px;
+        &__image {
+            height: 220px;
+        }
+        &__info {
+            padding: 15px;
+        }
+    }
+    
+/*menus*/
+
 }

@@ -91,11 +91,13 @@ a {
   font-weight: 500;
   cursor: pointer;
   background: linear-gradient(to top left, #9356dc, #ff79da);
+  transition-duration: 600ms;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+  transition-duration: 600ms;
 }
 .explore__btn:hover {
   background: linear-gradient(to top left, #9b63df, #ff88de);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.35);
-  transition-duration: 400ms;
 }
 
 /*"fonctionnement"*/
@@ -117,24 +119,26 @@ a {
 .operation__item {
   display: flex;
   align-items: center;
+  position: relative;
   height: 75px;
   margin: 0 25px;
+  padding: 0 25px;
   border-radius: 30px;
   background-color: #f2f2f2;
   box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+  transition-duration: 600ms;
 }
 .operation__item:hover {
   background-color: #f2eafb;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.35);
-  transition-duration: 400ms;
 }
 .operation__item:hover .operation__icon {
   color: #9356dc;
   transition: 400ms;
 }
 .operation__num {
-  position: relative;
-  left: -0.7em;
+  position: absolute;
+  left: -12.5px;
   width: 25px;
   height: 25px;
   line-height: 25px;
@@ -177,12 +181,12 @@ a {
   max-width: 400px;
   border-radius: 15px;
   box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+  transition-duration: 600ms;
   overflow: hidden;
-  margin: 0 auto 18px auto;
+  margin: 0 auto 20px auto;
 }
 .card:hover {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.35);
-  transition-duration: 400ms;
 }
 .card__image {
   height: 170px;
@@ -237,6 +241,7 @@ a {
   z-index: 2;
   transform: scale(1.1);
   transition-property: transform;
+  transition-duration: 800ms;
 }
 .card__info__icon .filled-heart {
   position: absolute;
@@ -254,8 +259,8 @@ a {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 22px;
   transition-duration: 800ms;
+  font-size: 22px;
 }
 
 /*footer*/
@@ -323,7 +328,9 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   width: 100%;
+  margin-top: -40px;
   padding: 35px 15px 60px 15px;
   border-radius: 40px 40px 0 0;
   background-color: #f2f2f2;
@@ -357,6 +364,7 @@ a {
   z-index: 2;
   transform: scale(1.1);
   transition-property: transform;
+  transition-duration: 800ms;
 }
 .menu__title__icon .filled-heart {
   position: absolute;
@@ -374,8 +382,8 @@ a {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 22px;
   transition-duration: 800ms;
+  font-size: 22px;
 }
 .menu__dishes {
   font-family: "roboto", sans-serif;
@@ -384,8 +392,7 @@ a {
 }
 .menu__dishes__title {
   width: 40px;
-  margin-bottom: 15px;
-  margin-left: 10px;
+  margin: 0 0 15px 10px;
   padding-bottom: 5px;
   border-bottom: 3px #99e2d0 solid;
   text-transform: uppercase;
@@ -403,11 +410,13 @@ a {
   font-weight: 500;
   cursor: pointer;
   background: linear-gradient(to top left, #9356dc, #ff79da);
+  transition-duration: 600ms;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+  transition-duration: 600ms;
 }
 .menu__btn:hover {
   background: linear-gradient(to top left, #9b63df, #ff88de);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.35);
-  transition-duration: 400ms;
 }
 
 .dish {
@@ -420,10 +429,10 @@ a {
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+  transition-duration: 600ms;
 }
 .dish:hover {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.35);
-  transition-duration: 400ms;
 }
 .dish__info__title {
   font-size: 1.1rem;
@@ -443,6 +452,112 @@ a {
 }
 .dish__check {
   display: none;
+}
+
+/*tablet design*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /*index*/
+  body {
+    min-width: none;
+    max-width: none;
+    width: 100%;
+  }
+
+  #operation {
+    height: auto;
+  }
+
+  .operation__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: auto;
+  }
+  .operation__item {
+    width: 200px;
+  }
+
+  .restaurants__cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .card {
+    min-width: initial;
+    max-width: initial;
+    width: 40%;
+    margin: 0 0 30px 0;
+  }
+
+  /*menus*/
+}
+/*desktop design*/
+@media screen and (min-width: 992px) {
+  /*index*/
+  body {
+    min-width: none;
+    max-width: none;
+    width: 100%;
+  }
+
+  #header {
+    background-color: #f2f2f2;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .header__title {
+    margin: 0;
+  }
+
+  main {
+    display: flex;
+    width: 100%;
+  }
+
+  #explore-operation {
+    width: 30%;
+    margin-left: 15px;
+  }
+
+  .operation__item {
+    height: 60px;
+  }
+  .operation__title {
+    margin-left: 15px;
+  }
+
+  #restaurants {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 15px;
+    background-color: initial;
+  }
+
+  .restaurants__cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .restaurants__title {
+    margin-left: 40px;
+  }
+
+  .card {
+    min-width: none;
+    max-width: none;
+    width: 40%;
+    margin-bottom: 40px;
+  }
+  .card__image {
+    height: 220px;
+  }
+  .card__info {
+    padding: 15px;
+  }
+
+  /*menus*/
 }
 
 /*# sourceMappingURL=styles.css.map */
