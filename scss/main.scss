@@ -414,6 +414,8 @@ a {
     }
 }
 
+/*image*/
+
 .banner {
     display: flex;
     justify-content: center;
@@ -425,6 +427,8 @@ a {
         width: 100%;
     }
 }
+
+/*menu dishes*/
 
 .menu {
     display: flex;
@@ -592,6 +596,40 @@ a {
 
     /*menus*/
 
+    .banner {
+        height: 350px;
+        margin: 20px 40px 40px 40px;
+        border-radius: 30px;
+    }
+
+    .menu {
+        margin-top: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+        border-radius: 0;
+        &__dishes {
+            &__title {
+                font-size: 1.1em;
+            }
+        }
+    }
+
+    .dish {
+        &__info {
+            &__title {
+                font-size: 1.1rem;
+            }
+
+            &__txt {
+                font-size: 1rem;
+            }
+
+        }
+
+        &__price {
+            font-size: 1.1rem;
+        }
+    }
 }
 
 
@@ -633,6 +671,7 @@ a {
         &__item {
             height: 60px;
         }
+
         &__title {
             margin-left: 15px;
         }
@@ -650,6 +689,7 @@ a {
             display: flex;
             flex-wrap: wrap;
         }
+
         &__title {
             margin-left: 40px;
         }
@@ -660,14 +700,48 @@ a {
         max-width: none;
         width: 40%;
         margin-bottom: 40px;
+
         &__image {
+            display: flex;
+            justify-content: center;
             height: 220px;
+            &__img {
+                width: 130%;
+            }
         }
+
         &__info {
             padding: 15px;
         }
     }
     
 /*menus*/
+
+    #header {
+        display: flex;
+        align-items: center;
+    }
+
+    .banner {
+        height: 400px;
+        width: 60%;
+        margin-left: 15px;
+        border-radius: 40px;
+        @include box-shadow;
+
+        &:hover {
+            @include box-shadow-hover;
+        }
+
+        &__img {
+            width: 110%;
+        }
+    }
+
+    .menu {
+        width: 40%;
+        margin: 0 15px 15px 15px;
+        border-radius: 40px;
+    }
 
 }
