@@ -766,7 +766,7 @@ a {
 
   .banner {
     height: 400px;
-    width: 60%;
+    width: 55%;
     margin-left: 15px;
     border-radius: 40px;
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
@@ -780,7 +780,7 @@ a {
   }
 
   .menu {
-    width: 40%;
+    width: 45%;
     margin: 0 15px 15px 15px;
     border-radius: 40px;
   }
