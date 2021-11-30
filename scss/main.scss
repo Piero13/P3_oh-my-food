@@ -48,7 +48,7 @@ $color-tertiary:#99e2d0;
     margin-right: 10px;
     width: 28px;
     height: 28px;
-    font-size: 22px;
+    font-size: 1.4rem;
     position: relative;
     z-index: 1;
     overflow: hidden;    
@@ -79,7 +79,7 @@ $color-tertiary:#99e2d0;
 }
 
 @mixin heart-gradient-hover {
-    font-size: 22px;
+    font-size: 1.5rem;
 }
 
 
@@ -306,6 +306,7 @@ a {
     &__txt {
         width: fit-content;
         font-weight: bold;
+        font-size: 1rem;
     }
 }
 
@@ -324,7 +325,7 @@ a {
 
     &__txt {
         padding: 0 20px 15px 20px;
-        font-size: 18px;
+        font-size: 1.1rem;
         color: lighten(#000000, 50%);
     }
 
@@ -390,7 +391,7 @@ a {
         line-height: 25px;
         background-color: $color-primary;
         border-radius: 50%;
-        font-size: 14px;
+        font-size: 0.9rem;
         color: #fff;
         text-align: center;
     }
@@ -402,11 +403,11 @@ a {
         width: 25px;
         height: 25px;
         margin: 0 15px 0 15px;
-        font-size: 20px;
+        font-size: 1.3rem;
     }
 
     &__txt {
-        font-size: 15px;
+        font-size: 1rem;
         font-weight: bold;
     }
 }
@@ -473,12 +474,12 @@ a {
         color: #000;
 
         &__title {
-            font-size: 16px;
+            font-size: 1rem;
             margin-bottom: 5px;
         }
 
         &__text {
-            font-size: 16px;
+            font-size: 0.9rem;
         }
 
         &__icon {
@@ -518,8 +519,8 @@ a {
 .footer{
     &__title {
         font-family: $font-fam-title;
-        font-size: 17px;
-        font-weight: 500;
+        font-size: 1.1rem;
+        font-weight: lighter;
         margin-bottom: 25px;
     }
 
@@ -528,7 +529,7 @@ a {
 
         &__item {
             margin: 10px 0;
-            font-size: 15px;
+            font-size: 0.9rem;
             font-weight: 500;
 
             &:hover {
@@ -658,7 +659,7 @@ a {
             padding-bottom: 5px;
             border-bottom: 3px $color-tertiary solid;
             text-transform: uppercase;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: lighter;
         }
     }
@@ -744,7 +745,7 @@ a {
 
 /*tablet design*/
 
-@media screen and (min-width:768px) and (max-width:991px) {
+@media screen and (min-width:768px) and (max-width:1023px) {
     
 /*index*/
 
@@ -783,7 +784,7 @@ a {
     .card {
         min-width: initial;
         max-width: initial;
-        width: 40%;
+        width: 45%;
         margin: 0 0 30px 0;
     }
 
@@ -791,18 +792,15 @@ a {
 
     .banner {
         height: 350px;
-        margin: 20px 40px 40px 40px;
-        border-radius: 30px;
     }
 
     .menu {
-        margin-top: 0;
-        padding-left: 40px;
-        padding-right: 40px;
-        border-radius: 0;
+        margin-top: -50px;
+        padding: 40px 40px 60px 40px;
+
         &__dishes {
             &__title {
-                font-size: 1.1em;
+                font-size: 1.2em;
             }
         }
     }
@@ -828,7 +826,7 @@ a {
 
 /*desktop design*/
 
-@media screen and (min-width:992px) {
+@media screen and (min-width:1024px) {
         
 /*index*/
 
@@ -839,52 +837,74 @@ a {
     }
 
     #header {
-        background-color: #f2f2f2;
         padding: 15px;
-        margin-bottom: 15px;
     }
 
     .header {
         &__title {
             margin: 0;
+            font-size: 2rem;
         }
     }
 
-    main {
-        display: flex;
-        width: 100%;
+    .location {
+        &__txt {
+            font-size: 1.1rem;
+        }
     }
 
-    #explore-operation {
-        width: 30%;
-        margin-left: 15px;
+    #operation {
+        padding: 0 35px;
+        height: auto;
     }
 
     .operation {
-        &__item {
-            height: 60px;
-        }
-
         &__title {
             margin-left: 15px;
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: auto;
+        }
+
+        &__item {
+            width: 30%;
+            height: 70px;
+        }
+
+        &__num {
+            left: -15px;
+            line-height: 30px;
+            width: 30px;
+            height: 30px;
+            font-size: 1rem;
+        }
+
+        &__icon {
+            font-size: 1.4rem;
+        }
+
+        &__txt {
+            font-size: 1.1rem;
         }
     }
 
     #restaurants {
-        width: 70%;
         margin: 0 auto;
-        padding-top: 15px;
+        padding: 15px 35px 50px 35px;
         background-color: initial;
     }
 
     .restaurants {
+        &__title {
+            margin-left: 15px;
+        }
         &__cards{
             display: flex;
             flex-wrap: wrap;
-        }
-
-        &__title {
-            margin-left: 40px;
         }
     }
 
@@ -897,7 +917,7 @@ a {
         &__image {
             display: flex;
             justify-content: center;
-            height: 220px;
+            height: 300px;
             &__img {
                 width: 130%;
             }
@@ -905,6 +925,24 @@ a {
 
         &__info {
             padding: 15px;
+            &__title {
+                font-size: 1.1rem;
+            }
+
+            &__text {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .footer {
+        &__title {
+            font-size: 1.2rem;
+        }
+        &__list {
+            &__item {
+                font-size: 1rem;
+            }
         }
     }
     
@@ -916,10 +954,8 @@ a {
     }
 
     .banner {
-        height: 400px;
-        width: 60%;
-        margin-left: 15px;
-        border-radius: 40px;
+        height: 500px;
+  
         @include box-shadow;
 
         &:hover {
@@ -932,9 +968,51 @@ a {
     }
 
     .menu {
-        width: 40%;
-        margin: 0 15px 15px 15px;
-        border-radius: 40px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-top: -50px;
+        padding: 40px 40px 60px 40px;
+        &__title {
+            padding: 0;
+        }
+
+        &__dishes {
+            width: 30%;
+            &__title {
+                font-size: 1.1rem;
+            }
+        }
+
+        &__form {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
     }
 
+    .dish {
+        height: 80px;
+        margin: 20px 0;
+        border-radius: 20px;
+        &__info {
+            &__title {
+                font-size: 1.1rem;
+            }
+
+            &__txt {
+                font-size: 1rem;
+            }
+        }
+
+        &__price p {
+            font-size: 1rem;
+        }
+
+        &__check {
+            height: 80px;
+            border-radius: 0 20px 20px 0;
+        }
+    }
 }
