@@ -1,0 +1,72 @@
+@mixin box-shadow {
+    box-shadow: 3px 3px 15px rgba(0,0,0,.2);
+    transition-duration: 600ms;
+}
+
+@mixin box-shadow-hover {
+    box-shadow: 5px 5px 15px rgba(0,0,0,.35) ;
+}
+
+@mixin btn {
+    height: 50px;
+    width: 215px;
+    padding: 16px 20px 15px 20px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 3px 3px 15px rgba(0,0,0,.25);
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+@mixin btn-gradient {
+    background: linear-gradient(to top left, $color-primary, $color-secondary);
+    transition-duration: 600ms;
+}
+
+@mixin btn-gradient-hover {
+    $colour1: lighten($color-primary,3%);
+    $colour2: lighten($color-secondary,3%);
+    background: linear-gradient(to top left, $colour1, $colour2);
+}
+
+@mixin heart-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    width: 28px;
+    height: 28px;
+    font-size: 1.4rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;    
+}
+
+@mixin empty-heart {
+    position: absolute;
+    z-index: 2;
+    transform: scale(1.1);
+    transition-property: transform;
+    transition-duration: 800ms;
+}
+
+@mixin filled-heart {
+    position: absolute;
+    z-index: 3;
+    font-size: 0;
+}
+
+@mixin heart-gradient {
+    background: -moz-linear-gradient(to bottom, $color-primary, $color-secondary); 
+    background: -webkit-linear-gradient(to bottom, $color-primary, $color-secondary); 
+    background: linear-gradient(to bottom, $color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+    transition-duration: 800ms;
+}
+
+@mixin heart-gradient-hover {
+    font-size: 1.5rem;
+}

@@ -1,0 +1,38 @@
+#footer {
+    background-color: lighten(#000000, 20%);
+    color: #fff;
+    padding: 25px;
+}
+
+.footer{
+    &__title {
+        font-family: $font-fam-title;
+        font-size: 1.1rem;
+        font-weight: lighter;
+        margin-bottom: 25px;
+    }
+
+    &__list {
+        list-style: none;
+
+        &__item {
+            margin: 10px 0;
+            font-size: 0.9rem;
+            font-weight: 500;
+
+            &:hover {
+                text-shadow: 2px 2px 5px rgba(#fff,0.4);
+            }
+
+            & i {
+                width: 25px;
+                font-size: 14px;
+            }
+
+            & a {
+            color: #fff;
+            text-decoration: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,77 @@
+@media screen and (min-width:768px) and (max-width:1023px) {
+    
+    /*index*/
+    
+        body {
+            min-width: initial;
+            max-width: initial;
+            width: 100%;
+        }
+    
+        #operation {
+            height: auto;
+        }
+    
+        .operation {
+            &__list {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                height: auto;
+            }
+    
+            &__item {
+                width: 200px;
+            }
+        }
+    
+        .restaurants {
+            &__cards{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+        }
+    
+        .card {
+            min-width: initial;
+            max-width: initial;
+            width: 45%;
+            margin: 0 0 30px 0;
+        }
+    
+        /*menus*/
+    
+        .banner {
+            height: 350px;
+        }
+    
+        .menu {
+            margin-top: -50px;
+            padding: 40px 40px 60px 40px;
+    
+            &__dishes {
+                &__title {
+                    font-size: 1.2em;
+                }
+            }
+        }
+    
+        .dish {
+            &__info {
+                &__title {
+                    font-size: 1.1rem;
+                }
+    
+                &__txt {
+                    font-size: 1rem;
+                }
+    
+            }
+    
+            &__price {
+                font-size: 1.1rem;
+            }
+        }
+    }

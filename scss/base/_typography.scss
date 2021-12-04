@@ -1,0 +1,16 @@
+h1 {
+    font-family: $font-fam-title
+}
+
+h2 {
+    font-size: 22px;
+}
+
+p, h2, h3, input, li {
+    font-family: $font-fam-txt
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}

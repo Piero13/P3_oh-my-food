@@ -1,0 +1,192 @@
+@media screen and (min-width:1024px) {
+        
+    /*index*/
+    
+        body {
+            min-width: initial;
+            max-width: initial;
+            width: 100%;
+        }
+    
+        #header {
+            padding: 15px;
+        }
+    
+        .header {
+            &__title {
+                margin: 0;
+                font-size: 2rem;
+            }
+        }
+    
+        .location {
+            &__txt {
+                font-size: 1.1rem;
+            }
+        }
+    
+        #operation {
+            padding: 0 35px;
+            height: auto;
+        }
+    
+        .operation {
+            &__title {
+                margin-left: 15px;
+            }
+    
+            &__list {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                height: auto;
+            }
+    
+            &__item {
+                width: 30%;
+                height: 70px;
+            }
+    
+            &__num {
+                left: -15px;
+                line-height: 30px;
+                width: 30px;
+                height: 30px;
+                font-size: 1rem;
+            }
+    
+            &__icon {
+                font-size: 1.4rem;
+            }
+    
+            &__txt {
+                font-size: 1.1rem;
+            }
+        }
+    
+        #restaurants {
+            margin: 0 auto;
+            padding: 15px 35px 50px 35px;
+            background-color: initial;
+        }
+    
+        .restaurants {
+            &__title {
+                margin-left: 15px;
+            }
+            
+            &__cards{
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    
+        .card {
+            min-width: initial;
+            max-width: initial;
+            width: 40%;
+            margin-bottom: 40px;
+    
+            &__image {
+                display: flex;
+                justify-content: center;
+                height: 300px;
+                &__img {
+                    width: 130%;
+                }
+            }
+    
+            &__info {
+                padding: 15px;
+                &__title {
+                    font-size: 1.1rem;
+                }
+    
+                &__text {
+                    font-size: 1rem;
+                }
+            }
+        }
+    
+        .footer {
+            &__title {
+                font-size: 1.2rem;
+            }
+            &__list {
+                &__item {
+                    font-size: 1rem;
+                }
+            }
+        }
+        
+    /*menus*/
+    
+        #header {
+            display: flex;
+            align-items: center;
+        }
+    
+        .banner {
+            height: 500px;
+      
+            @include box-shadow;
+    
+            &:hover {
+                @include box-shadow-hover;
+            }
+    
+            &__img {
+                width: 110%;
+            }
+        }
+    
+        .menu {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-top: -50px;
+            padding: 40px 40px 60px 40px;
+            &__title {
+                padding: 0;
+            }
+    
+            &__dishes {
+                width: 30%;
+                &__title {
+                    font-size: 1.1rem;
+                }
+            }
+    
+            &__form {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+        }
+    
+        .dish {
+            height: 80px;
+            margin: 20px 0;
+            border-radius: 20px;
+            &__info {
+                &__title {
+                    font-size: 1.1rem;
+                }
+    
+                &__txt {
+                    font-size: 1rem;
+                }
+            }
+    
+            &__price p {
+                font-size: 1rem;
+            }
+    
+            &__check {
+                height: 80px;
+                border-radius: 0 20px 20px 0;
+            }
+        }
+    }
+    

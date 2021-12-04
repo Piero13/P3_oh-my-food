@@ -1,0 +1,236 @@
+/*header*/
+
+.header {
+    &__title {
+        width: 100%;
+        margin: 15px 0;
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: lighter;
+    }
+}
+
+/*search & explore*/
+
+#explore {
+    background-color: #f2f2f2;
+    height: 350px;
+    margin-bottom: 50px;
+}
+
+.location {
+    display: flex;
+    justify-content: center;
+    height: 55px;
+    padding: 17px;
+    background-color: darken($color: #f2f2f2, $amount: 5%);
+
+    & i {
+        position: relative;
+        left: -15px;
+    }
+
+    &__txt {
+        width: fit-content;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+}
+
+.explore {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 295px;
+    padding: 40px 0 55px 0;
+    text-align: center;
+
+    &__title {
+        padding: 0 50px;
+        font-weight: bolder;
+    }
+
+    &__txt {
+        padding: 0 20px 15px 20px;
+        font-size: 1.1rem;
+        color: lighten(#000000, 50%);
+    }
+
+    &__btn {
+        @include btn;
+        @include btn-gradient;
+        @include box-shadow;
+
+        &:hover {
+            @include btn-gradient-hover;
+            @include box-shadow-hover;
+        }
+    }
+}
+
+/*"fonctionnement"*/
+
+#operation {
+    height: 350px;
+    margin-bottom: 60px;
+}
+
+.operation {
+    &__title {
+        height: 60px;
+        margin-left: 20px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 290px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 75px;
+        margin: 0 25px;
+        padding: 0 25px;
+        border-radius: 30px;
+        background-color: #f2f2f2;
+        @include box-shadow;
+
+        &:hover {
+            background-color: lighten($color-primary, 34%);
+            @include box-shadow-hover;
+
+            & .operation__icon {
+                color: $color-primary;
+                transition: 400ms;
+            }
+        }
+    }
+
+    &__num {
+        position: absolute;
+        left: -12.5px;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        background-color: $color-primary;
+        border-radius: 50%;
+        font-size: 0.9rem;
+        color: #fff;
+        text-align: center;
+    }
+
+    &__icon {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 25px;
+        width: 25px;
+        height: 25px;
+        margin: 0 15px 0 15px;
+        font-size: 1.3rem;
+    }
+
+    &__txt {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}
+
+/*restaurants*/
+
+#restaurants {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 25px;
+    background-color: #f2f2f2;
+}
+
+.restaurants {
+    &__title {
+        margin-bottom: 25px;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    min-width: 270px;
+    max-width: 400px;
+    border-radius: 15px;
+    @include box-shadow;
+    overflow: hidden;
+    margin: 0 auto 20px auto;
+
+    &:hover {
+        @include box-shadow-hover;
+    }
+
+    &__image {
+        height: 170px;
+        position: relative;
+        overflow: hidden;
+
+        &__img {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+
+        &__overtext {
+            position: absolute;
+            top: 8%;
+            right: 5%;
+            padding: 6px 12px;
+            background-color: $color-tertiary;
+            border-radius: 3px;
+            font-size: 14px;
+            font-weight: bold;
+            color: darken($color: $color-tertiary, $amount: 40%);
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 10px;
+        background-color: #fff;
+        color: #000;
+
+        &__title {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        &__text {
+            font-size: 0.9rem;
+        }
+
+        &__icon {
+            @include heart-icon;
+
+            & .empty-heart {
+                @include empty-heart;
+            }
+
+            & .filled-heart {
+                @include filled-heart;
+            }
+
+            &:hover {               
+                & .empty-heart {
+                    color: transparent;
+                    transition: all 1.6s;
+                }
+
+                & .filled-heart {
+                    @include heart-gradient;
+                    @include heart-gradient-hover;
+                }
+            }
+        }
+    }
+}

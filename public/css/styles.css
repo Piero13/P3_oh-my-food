@@ -30,7 +30,7 @@
     color: #9356dc;
   }
   50% {
-    color: #ff79da;
+    color: #ff7ad9;
   }
   to {
     color: #9356dc;
@@ -88,7 +88,39 @@ a {
   color: #000;
 }
 
-/*index*/
+/*footer*/
+#footer {
+  background-color: #333333;
+  color: #fff;
+  padding: 25px;
+}
+
+.footer__title {
+  font-family: "shrikhand", cursive, sans-serif;
+  font-size: 1.1rem;
+  font-weight: lighter;
+  margin-bottom: 25px;
+}
+.footer__list {
+  list-style: none;
+}
+.footer__list__item {
+  margin: 10px 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.footer__list__item:hover {
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.4);
+}
+.footer__list__item i {
+  width: 25px;
+  font-size: 14px;
+}
+.footer__list__item a {
+  color: #fff;
+  text-decoration: none;
+}
+
 /*loader*/
 .loader {
   display: flex;
@@ -151,7 +183,7 @@ a {
   width: 30px;
   height: 30px;
   border-radius: 15px;
-  background-color: #ff79da;
+  background-color: #ff7ad9;
   animation: loader-circles 0.9s linear 0.8s normal forwards;
 }
 .loader__circle:nth-child(3) {
@@ -162,6 +194,7 @@ a {
   animation: loader-circles 0.9s linear 1.6s normal forwards;
 }
 
+/*index*/
 /*header*/
 .header__title {
   width: 100%;
@@ -222,13 +255,13 @@ a {
   color: #fff;
   font-weight: 500;
   cursor: pointer;
-  background: linear-gradient(to top left, #9356dc, #ff79da);
+  background: linear-gradient(to top left, #9356dc, #ff7ad9);
   transition-duration: 600ms;
   box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
   transition-duration: 600ms;
 }
 .explore__btn:hover {
-  background: linear-gradient(to top left, #9b63df, #ff88de);
+  background: linear-gradient(to top left, #9b63df, #ff8ade);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.35);
 }
 
@@ -385,47 +418,14 @@ a {
   transition: all 1.6s;
 }
 .card__info__icon:hover .filled-heart {
-  background: -moz-linear-gradient(to bottom, #9356dc, #ff79da);
-  background: -webkit-linear-gradient(to bottom, #9356dc, #ff79da);
-  background: linear-gradient(to bottom, #9356dc, #ff79da);
+  background: -moz-linear-gradient(to bottom, #9356dc, #ff7ad9);
+  background: -webkit-linear-gradient(to bottom, #9356dc, #ff7ad9);
+  background: linear-gradient(to bottom, #9356dc, #ff7ad9);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   transition-duration: 800ms;
   font-size: 1.5rem;
-}
-
-/*footer*/
-#footer {
-  background-color: #333333;
-  color: #fff;
-  padding: 25px;
-}
-
-.footer__title {
-  font-family: "shrikhand", cursive, sans-serif;
-  font-size: 1.1rem;
-  font-weight: lighter;
-  margin-bottom: 25px;
-}
-.footer__list {
-  list-style: none;
-}
-.footer__list__item {
-  margin: 10px 0;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-.footer__list__item:hover {
-  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.4);
-}
-.footer__list__item i {
-  width: 25px;
-  font-size: 14px;
-}
-.footer__list__item a {
-  color: #fff;
-  text-decoration: none;
 }
 
 /*Menus*/
@@ -511,9 +511,9 @@ a {
   transition: all 1.6s;
 }
 .menu__title__icon:hover .filled-heart {
-  background: -moz-linear-gradient(to bottom, #9356dc, #ff79da);
-  background: -webkit-linear-gradient(to bottom, #9356dc, #ff79da);
-  background: linear-gradient(to bottom, #9356dc, #ff79da);
+  background: -moz-linear-gradient(to bottom, #9356dc, #ff7ad9);
+  background: -webkit-linear-gradient(to bottom, #9356dc, #ff7ad9);
+  background: linear-gradient(to bottom, #9356dc, #ff7ad9);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -554,13 +554,13 @@ a {
   color: #fff;
   font-weight: 500;
   cursor: pointer;
-  background: linear-gradient(to top left, #9356dc, #ff79da);
+  background: linear-gradient(to top left, #9356dc, #ff7ad9);
   transition-duration: 600ms;
   box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
   transition-duration: 600ms;
 }
 .menu__btn:hover {
-  background: linear-gradient(to top left, #9b63df, #ff88de);
+  background: linear-gradient(to top left, #9b63df, #ff8ade);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.35);
 }
 
