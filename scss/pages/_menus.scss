@@ -176,6 +176,11 @@
         background-color: $color-tertiary;
         color: #fff;
         font-size: 1.5rem;
+        transition-duration: 600ms;
+    }
+
+    & .fa-check-circle {
+        transition-duration: 600ms;
     }
 
     &:hover {
@@ -183,8 +188,11 @@
         padding-right: 70px;
 
         & .dish__check {
-            right: 0;
-            transition-duration: 600ms;
+            right:0px;
+
+            & .fa-check-circle {
+            transform: rotate(360deg);
+            }
         }
     }
 }

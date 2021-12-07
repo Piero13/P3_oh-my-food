@@ -615,14 +615,20 @@ a {
   background-color: #99e2d0;
   color: #fff;
   font-size: 1.5rem;
+  transition-duration: 600ms;
+}
+.dish .fa-check-circle {
+  transition-duration: 600ms;
 }
 .dish:hover {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.35);
   padding-right: 70px;
 }
 .dish:hover .dish__check {
-  right: 0;
-  transition-duration: 600ms;
+  right: 0px;
+}
+.dish:hover .dish__check .fa-check-circle {
+  transform: rotate(360deg);
 }
 
 /*tablet design*/
